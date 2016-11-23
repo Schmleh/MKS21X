@@ -1,0 +1,1 @@
+# Min-Period-6-APCS1
