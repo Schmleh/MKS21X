@@ -1,16 +1,21 @@
 GIT Commands!!!
 
-add
-addsthethings
+clone <bleh>
+makes the repository <bleh> in your local machine
 
-clone
-makes the things in your place
+add
+adds the things
+(makes them ready for commiting)
+using with -A does it to all files in the repo
+
+commit -m "<message>"
+makes your ready to commit stuff into commits
+you must put a message like:
+"Call Pinkie Pie at 1-PIN-KHO-RSIE"
 
 push
 makes your commits into real public stuffs
 
-commit
-makes your not yet stuff into actual commits
 
 pull
 gets the real public stuffs
