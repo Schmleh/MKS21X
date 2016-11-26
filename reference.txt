@@ -1,0 +1,16 @@
+GIT Commands!!!
+
+add
+addsthethings
+
+clone
+makes the things in your place
+
+push
+makes your commits into real public stuffs
+
+commit
+makes your not yet stuff into actual commits
+
+pull
+gets the real public stuffs
