@@ -1,4 +1,6 @@
 # Min-Period-6-APCS1
-Added pinkie!<br>
+Added Pinkie Pie!<br>
 
-Note: Did not actually.<br>
+*This time for real.<br>
+
+Note: Did not actually add Pinkie Pie for real.<br>
