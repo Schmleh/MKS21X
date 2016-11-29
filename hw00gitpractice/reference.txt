@@ -1,0 +1,14 @@
+--global <things> <more things>
+does stuff
+
+add <file>
+adds things
+
+commit <file>
+makes your changes into actual changes
+
+push
+puts your stuff on the interwebz
+
+status
+shows how stuff your things are
