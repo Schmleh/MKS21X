@@ -1,19 +1,19 @@
 import java.util.*;
 
 public class SuperArrayIterator implements Iterator<String>{
-    public SuperArray sarry;
+    public String[] sarry;
     public int current;
-    public SuperArrayIterator(SuperArray jarry, int jurrent){
+    public SuperArrayIterator(String[] jarry, int jurrent){
 	sarry = jarry;
 	current = jurrent;
     }
     public boolean hasNext(){
-	return current < sarry.size() - 1;
+	return current < sarry.length - 1;
     }
     public String next(){
 	if (hasNext()){
 	    current += 1;
-	    return sarry.get(current);
+	    return sarry[current];
 	}else{
 	    throw new NoSuchElementException();
 	}
