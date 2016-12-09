@@ -5,7 +5,10 @@ public class Barcode implements Comparable<Barcode>{
     private String _zip;
     private int _checkDigits;
     public final String[] keycode = {":::||", "::|:|", "::||:", ":|::|", ":|:|:", ":||::", "|:::|", "|::|:", "|:|::", "||:::"};
-    
+
+    private String _zip;
+    private int _checkDigits;
+
     public Barcode(String zip){
 	if (zip.length() != 5){
 	    System.out.println("The barcode must be five digits long.");
@@ -21,11 +24,10 @@ public class Barcode implements Comparable<Barcode>{
 	    _checkDigits += (zip.charAt(i) - '0');
 	}
     }
-    
     public int checkSum(){
 	return _checkDigits;
     }
-
+    
     public static String toZip(String barcode){
 	if (barcode.length() != 32){
 	    System.out.println("The barcode must be 32 characters long.");
@@ -70,19 +72,34 @@ public class Barcode implements Comparable<Barcode>{
 	    sum += (zip.charAt(i) - '0');
 	}
 	zip += (sum % 10);
+	return zip;
+    }
+    
+    public String toString(){
+	String zip = _zip + (_checkDigits % 10);
 	String code = "|";
 	for (int i = 0; i < zip.length(); i ++){
 	    switch(zip.charAt(i) - '0'){
 	    case 1 : code += ":::||";
+		break;
 	    case 2 : code += "::|:|";
+		break;
 	    case 3 : code += "::||:";
+		break;
 	    case 4 : code += ":|::|";
+		break;
 	    case 5 : code += ":|:|:";
+		break;
 	    case 6 : code += ":||::";
+		break;
 	    case 7 : code += "|:::|";
+		break;
 	    case 8 : code += "|::|:";
+		break;
 	    case 9 : code += "|:|::";
+		break;
 	    case 0 : code += "||:::";
+		break;
 	    }
 	}
 	code += "|";
@@ -94,13 +111,13 @@ public class Barcode implements Comparable<Barcode>{
     }
 
     public static void main(String[] args){
-	/*Barcode one = new Barcode("345aa");
-	Barcode two = new Barcode("78910");
+	Barcode one = new Barcode("11100");
+	Barcode two = new Barcode("22222");
 	System.out.println(one.toString());
 	System.out.println(two.toString());
 	System.out.println(one.checkSum());
 	System.out.println(two.clone().toString());
 	System.out.println(one.compareTo(two));
-	System.out.println(one.clone());*/
+	System.out.println(one.clone());
     }
 }
