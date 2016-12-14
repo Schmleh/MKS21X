@@ -24,12 +24,13 @@ public class Sorts{
 
     public static void insertionSort(int[] data){
 	for (int location = 0; location < data.length; location ++){
-	    int tempspot = 0;
-	    for (int locup = location; locup >= 1 && data[locup] < data[locup - 1]; locup --){
-		tempspot = data[locup - 1];
-		data[locup - 1] = data[locup];
-		data[locup] = tempspot;
+	    int tempspot = data[location];
+	    int locup = location;
+	    while(locup >= 1 && tempspot < data[locup - 1]){
+		data[locup] = data[locup - 1];
+		locup --;
 	    }
+	    data[locup] = tempspot;
 	}
     }
 
