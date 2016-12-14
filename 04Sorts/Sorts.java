@@ -22,9 +22,20 @@ public class Sorts{
 	}
     }
 
+    public static void insertionSort(int[] data){
+	for (int location = 0; location < data.length; location ++){
+	    int tempspot = 0;
+	    for (int locup = location; locup >= 1 && data[locup] < data[locup - 1]; locup --){
+		tempspot = data[locup - 1];
+		data[locup - 1] = data[locup];
+		data[locup] = tempspot;
+	    }
+	}
+    }
+
     public static void main(String[] args){
 	int[] hos = {1,0,8,4,9,6,7,2,6,3,4,7,2};
-	selectionSort(hos);
+        insertionSort(hos);
 	for (int i : hos) {
 	    System.out.println(i);
 	}
