@@ -34,9 +34,26 @@ public class Sorts{
 	}
     }
 
+    public static void bubbleSort(int[] data){
+	int swaps = 5;
+	while (swaps != 0){
+	    swaps = 0;
+	    for (int place = 0; place < data.length - 1; place ++){
+		if (data[place] > data[place+1]){
+		    int tempspot = 0;
+		    tempspot = data[place + 1];
+		    data[place + 1] = data[place];
+		    data[place] = tempspot;
+		    swaps += 1;
+		}
+	    }
+	}
+    }
+	    
+    
     public static void main(String[] args){
 	int[] hos = {1,0,8,4,9,6,7,2,6,3,4,7,2};
-        insertionSort(hos);
+        bubbleSort(hos);
 	for (int i : hos) {
 	    System.out.println(i);
 	}
