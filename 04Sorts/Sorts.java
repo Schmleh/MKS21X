@@ -52,10 +52,10 @@ public class Sorts{
 	    
     
     public static void main(String[] args){
-	int[] hos = {1,0,8,4,9,6,7,2,6,3,4,7,2};
+    	int[] hos = {1,0,8,4,9,6,7,2,6,3,4,7,2};
         bubbleSort(hos);
-	for (int i : hos) {
-	    System.out.println(i);
-	}
+    	for (int i : hos) {
+    	    System.out.println(i);
+    	}
     }
 }
